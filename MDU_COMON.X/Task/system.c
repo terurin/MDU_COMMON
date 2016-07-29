@@ -41,7 +41,7 @@ void system_setup() {
 
     system_insert(basic_repeat, "repeat");
     //lip code
-    system_change(SystemModeSeleceted);
+    system_change(SystemMode);
     uart_puts("wake up on debag mode [Don't Multi conection.]\r");
     //system_mode=SystemModeListen;
 }
