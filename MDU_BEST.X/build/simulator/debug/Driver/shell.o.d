@@ -1,0 +1,19 @@
+build/simulator/debug/Driver/shell.o:  \
+Driver/shell.c  \
+ Driver/../Application/motor.h  \
+Driver/../Application/../Setting/types.h  \
+ Driver/../Application/../Setting/../Helper/dsp_helper.h  \
+ Driver/../Application/../Setting/configuration.h  \
+ Driver/../Application/../Setting/p30F4012.h  \
+ Driver/../Application/../Task/task.h  \
+ Driver/../Application/../Driver/uart.h  \
+ Driver/../Application/../Driver/../Setting/types.h  \
+ Driver/../Application/../Driver/encoder.h  \
+ Driver/../Application/../Driver/pwm.h  \
+ Driver/../Application/../Driver/timer.h  \
+Driver/../Task/system.h  \
+ Driver/../Task/../Setting/types.h  \
+Driver/shell.h  \
+Driver/shell_core.h  \
+ Driver/gcmem.h  \
+Driver/shell_bin.h 

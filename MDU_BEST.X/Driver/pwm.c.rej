@@ -1,0 +1,31 @@
+diff a/MDU_COMON.X/Driver/pwm.c b/MDU_COMON.X/Driver/pwm.c	(rejected hunks)
+@@ -160,22 +160,27 @@
+     pid_period=period;
+ }
+ 
+-int16_t pid_rate(){
++inline int16_t pid_rate(){
+     return rate;
+ }
+ 
+ 
+ void _ISR _PWMInterrupt(){
+-static uint16_t cnt;
++static uint16_t cnt,led;
+     if(cnt==pid_period/*(++cnt & 0xFF)==0x01*/){
++        if(led==10){
++            led_pwm(true);
++        }
+      flag=1;
+      rate=POSCNT-poss;
+      POSCNT=poss;
+      cnt=0;
+     }else{
++        led_pwm(false);
+         flag=0;
+     }
+     cnt++;
++    led++;
+     IFS2bits.PWMIF=false;
+ }
+ 
